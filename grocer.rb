@@ -103,5 +103,7 @@ def checkout(cart, coupons)
   apply_clearance(cart)
   
   while index < cart.count do 
+    item_cost = cart[index][:price] * cart[index][:num]
+    total += item_cost
     
 end
