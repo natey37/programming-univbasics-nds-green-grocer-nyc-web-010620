@@ -108,7 +108,7 @@ def checkout(cart, coupons)
     index += 1 
   end 
   
-  if final_price > 100 
+  if final_price >= 100 
     final_price * 0.9
   else 
     final_price
