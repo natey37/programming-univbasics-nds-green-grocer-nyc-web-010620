@@ -105,5 +105,10 @@ def checkout(cart, coupons)
   while index < cart.count do 
     item_cost = cart[index][:price] * cart[index][:num]
     total += item_cost
-    
+    index += 1 
+  end 
+  
+  if final_price > 100 
+    new_final_price = final_price * 0.9
+    new_final_price
 end
