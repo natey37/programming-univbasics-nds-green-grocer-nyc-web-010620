@@ -98,12 +98,12 @@ def checkout(cart, coupons)
   final_price = 0 
   index = 0 
   
-  final_cart = consolidate_cart(cart)
-  final_cart_with_coupons = apply_coupons(final_cart, coupons)
-  apply_clearance(final_cart_with_coupons)
+  new_cart = consolidate_cart(cart)
+  new_cart_with_coupons = apply_coupons(new_cart, coupons)
+  final_cart = apply_clearance(new_cart_with_coupons)
   
   while index < cart.count do 
-    item_cost = cart[index][:price] * cart[index][:count]
+    item_cost = final_cart[index][:price] * final_cart[index][:count]
     final_price += item_cost
     index += 1 
   end 
