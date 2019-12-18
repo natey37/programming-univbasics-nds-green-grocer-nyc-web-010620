@@ -77,7 +77,7 @@ def apply_clearance(cart)
   while index < cart.count do 
     item = cart[index]
     if item[:clearance]
-      discounted_price = item[:price] * 0.8
+      discounted_price = (item[:price] * 0.8).round(2)
       item[:price] = discounted_price
     end 
     index += 1 
