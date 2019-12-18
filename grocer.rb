@@ -104,7 +104,7 @@ def checkout(cart, coupons)
   
   while index < cart.count do 
     item_cost = cart[index][:price] * cart[index][:num]
-    total += item_cost
+    final_price += item_cost
     index += 1 
   end 
   
