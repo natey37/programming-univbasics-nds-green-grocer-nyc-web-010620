@@ -75,6 +75,7 @@ def apply_clearance(cart)
   index = 0 
   
   while index < cart.count do 
+    item = cart[index]
     
 end
 
